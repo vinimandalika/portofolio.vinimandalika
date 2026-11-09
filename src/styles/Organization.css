@@ -1,0 +1,118 @@
+.organization {
+  background-color: var(--ivory-100);
+}
+
+.organization-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.organization-card {
+  padding: 3rem;
+  animation: fadeInUp 0.8s ease-out;
+  position: relative;
+}
+
+.organization-badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, var(--petal-30), var(--petal-50));
+  color: var(--deep-espresso);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--petal-100);
+}
+
+.organization-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--deep-espresso);
+}
+
+.organization-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--petal-30);
+}
+
+.meta-item {
+  font-size: 0.95rem;
+  color: var(--text-body);
+}
+
+.meta-item strong {
+  color: var(--deep-espresso);
+  font-weight: 600;
+}
+
+.organization-description {
+  margin-bottom: 2rem;
+}
+
+.organization-description h4,
+.organization-responsibilities h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--deep-espresso);
+}
+
+.organization-description p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-body);
+}
+
+.organization-responsibilities {
+  margin-bottom: 2rem;
+}
+
+.organization-responsibilities ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.organization-responsibilities li {
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  line-height: 1.7;
+  color: var(--text-body);
+}
+
+.organization-responsibilities li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--petal-100);
+}
+
+.organization-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .organization-card {
+    padding: 2rem;
+  }
+
+  .organization-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .organization-meta {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .organization-description h4,
+  .organization-responsibilities h4 {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,87 @@
+.project-gallery {
+  background-color: var(--ivory-100);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.project-card {
+  padding: 2.5rem;
+  animation: fadeInUp 0.8s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card.featured {
+  background: linear-gradient(135deg, var(--ivory-90), var(--ivory-100));
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--petal-30), var(--petal-100));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-category {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, var(--petal-30), var(--petal-50));
+  color: var(--deep-espresso);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  border: 1px solid var(--petal-100);
+}
+
+.project-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: var(--deep-espresso);
+  line-height: 1.3;
+}
+
+.project-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-body);
+  margin-bottom: 1.5rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--petal-30);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    padding: 2rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
+  }
+}

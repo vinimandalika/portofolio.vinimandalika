@@ -1,0 +1,83 @@
+.about {
+  background: linear-gradient(180deg, var(--ivory-100), var(--ivory-90));
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.about-intro {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--deep-espresso);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.highlight-card {
+  background-color: var(--ivory-90);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid var(--petal-30);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--petal-20);
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px var(--petal-40);
+  border-color: var(--petal-50);
+}
+
+.highlight-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  filter: grayscale(100%) sepia(100%) saturate(300%) hue-rotate(300deg) opacity(0.7);
+}
+
+.highlight-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--deep-espresso);
+}
+
+.highlight-card p {
+  font-size: 1rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro {
+    font-size: 1.1rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+}

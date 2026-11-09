@@ -1,0 +1,89 @@
+.creative-journal {
+  background-color: var(--ivory-100);
+}
+
+.journal-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.journal-intro p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-body);
+  font-style: italic;
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.journal-card {
+  padding: 2.5rem;
+  animation: fadeInUp 0.8s ease-out;
+  position: relative;
+  background: linear-gradient(135deg, var(--ivory-90), var(--ivory-100));
+}
+
+.journal-category {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, var(--petal-30), var(--petal-50));
+  color: var(--deep-espresso);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  border: 1px solid var(--petal-100);
+}
+
+.journal-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--deep-espresso);
+  line-height: 1.4;
+}
+
+.journal-date {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 1.2rem;
+  font-style: italic;
+}
+
+.journal-excerpt {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-body);
+  margin-bottom: 1.5rem;
+}
+
+.journal-placeholder-note {
+  padding: 1rem;
+  background-color: var(--petal-20);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-style: italic;
+  border: 1px solid var(--petal-40);
+}
+
+@media (max-width: 768px) {
+  .journal-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .journal-card {
+    padding: 2rem;
+  }
+
+  .journal-card h3 {
+    font-size: 1.4rem;
+  }
+}

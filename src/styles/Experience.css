@@ -1,0 +1,128 @@
+.experience {
+  background-color: var(--ivory-100);
+}
+
+.experience-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--petal-30), var(--petal-100), var(--petal-30));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -47px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--petal-100);
+  border: 3px solid var(--ivory-100);
+  box-shadow: 0 0 0 3px var(--petal-30);
+  z-index: 1;
+}
+
+.timeline-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.timeline-header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--deep-espresso);
+}
+
+.timeline-header h4 {
+  font-size: 1.3rem;
+  color: var(--deep-espresso);
+  font-weight: 500;
+}
+
+.period-badge {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--petal-20);
+  color: var(--deep-espresso);
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  border: 1px solid var(--petal-40);
+}
+
+.experience-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+}
+
+.experience-list li {
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  line-height: 1.7;
+  color: var(--text-body);
+}
+
+.experience-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--petal-100);
+  font-weight: 700;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline-marker {
+    left: -37px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+  }
+
+  .timeline-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .timeline-header h4 {
+    font-size: 1.1rem;
+  }
+}
